@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="2.60dp">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/ivProfile"
+        android:layout_width="32.50dp"
+        android:layout_height="32.50dp"
+        android:background="@drawable/background_image"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/tvMessage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:riv_oval="true" />
+
+    <TextView
+        android:id="@+id/tvMessage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5.20dp"
+        android:background="@drawable/bg_received_message"
+        android:fontFamily="@font/tt_norms_std_condensed_normal"
+        android:paddingVertical="7.70dp"
+        android:paddingStart="13.00dp"
+        android:paddingEnd="7.80dp"
+        android:textColor="@color/dark_black"
+        android:textSize="16.90sp"
+        app:layout_constraintStart_toEndOf="@+id/ivProfile"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.75"
+        tools:layout_editor_absoluteX="5dp"
+        tools:text="message" />
+
+    <TextView
+        android:id="@+id/tvDateTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2.60dp"
+        android:textColor="@color/secondary_text"
+        android:textSize="9.10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMessage"
+        tools:text="05:45 PM" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

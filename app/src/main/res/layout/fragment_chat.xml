@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.minichatapp.ui.chat.ChatFragment">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#AEAEAE"
+        app:layout_constraintBottom_toTopOf="@+id/etMessage" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivSend"
+        android:layout_width="45.50dp"
+        android:layout_height="45.50dp"
+        android:padding="10.40dp"
+        android:src="@drawable/ic_send"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/etMessage"
+        app:tint="@color/primary" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivAdd"
+        android:layout_width="28.60dp"
+        android:layout_height="28.60dp"
+        android:layout_marginStart="15.60dp"
+        android:layout_marginEnd="20.80dp"
+        android:background="@drawable/background_chat_input"
+        android:padding="5.20dp"
+        android:src="@drawable/ic_add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/etMessage"
+        app:tint="@color/primary" />
+
+    <EditText
+        android:id="@+id/etMessage"
+        android:layout_width="0dp"
+        android:layout_height="52.00dp"
+        android:layout_marginStart="5.20dp"
+        android:layout_marginEnd="10.40dp"
+        android:fontFamily="@font/tt_norms_std_condensed_normal"
+        android:background="@null"
+        android:hint="@string/type_a_message"
+        android:imeOptions="actionDone"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:paddingHorizontal="7.80dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="@color/secondary_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ivSend"
+        app:layout_constraintStart_toEndOf="@+id/ivAdd" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="15.60dp"
+        android:background="@drawable/background_content_top"
+        app:layout_constraintBottom_toTopOf="@+id/etMessage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/headerBg"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/primary"
+        app:layout_constraintBottom_toTopOf="@+id/viewSupport"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivBack"
+        android:layout_width="39.00dp"
+        android:layout_height="39.00dp"
+        android:layout_marginStart="5.20dp"
+        android:layout_marginTop="15.60dp"
+        android:padding="6.50dp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/light_pink" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/ivUserImage"
+        android:layout_width="39.00dp"
+        android:scaleType="centerCrop"
+        android:layout_height="39.00dp"
+        android:layout_marginEnd="20.80dp"
+        app:riv_oval="true"
+        android:padding="2.60dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivBack"
+        app:layout_constraintStart_toEndOf="@+id/ivBack"
+        app:layout_constraintTop_toTopOf="@+id/ivBack"
+        tools:src="@drawable/ic_info" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivInfo"
+        android:layout_width="39.00dp"
+        android:layout_height="39.00dp"
+        android:layout_marginTop="15.60dp"
+        android:layout_marginEnd="20.80dp"
+        android:padding="6.50dp"
+        android:src="@drawable/ic_info"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/light_pink" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10.40dp"
+        android:ellipsize="end"
+        android:gravity="start"
+        android:fontFamily="@font/nimbus_san_bolt"
+        android:maxLines="1"
+        android:textColor="@color/white"
+        android:textSize="18.20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/ivBack"
+        app:layout_constraintEnd_toStartOf="@+id/ivInfo"
+        app:layout_constraintStart_toEndOf="@+id/ivUserImage"
+        app:layout_constraintTop_toTopOf="@+id/ivBack"
+        tools:text="Name" />
+
+    <View
+        android:id="@+id/viewSupport"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="15.60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivBack" />
+
+    <TextView
+        android:id="@+id/tvAvailability"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#008000"
+        android:padding="2.60dp"
+        android:text="@string/online"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="13.00sp"
+        android:fontFamily="@font/tt_norms_std_condensed_normal"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/headerBg"
+        tools:visibility="visible" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvChat"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        android:overScrollMode="never"
+        android:padding="19.50dp"
+        android:visibility="visible"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAvailability"
+        app:stackFromEnd="true"
+        tools:visibility="visible" />
+
+    <ProgressBar
+        android:id="@+id/pb"
+        android:layout_width="32.50dp"
+        android:layout_height="32.50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

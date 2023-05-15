@@ -1,4 +1,4 @@
-package com.example.memberchatapp.fcmservice
+package com.example.minichatapp.fcmservice
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -8,12 +8,12 @@ import android.os.Build
 import android.util.Log
 import androidx.annotation.RequiresApi
 import androidx.core.app.NotificationCompat
-import com.example.memberchatapp.R
-import com.example.memberchatapp.models.User
-import com.example.memberchatapp.ui.main.MainActivity
-import com.example.memberchatapp.utils.Constant
+import com.example.minichatapp.models.User
+import com.example.minichatapp.ui.main.MainActivity
+import com.example.minichatapp.utils.Constant
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
+import e.R
 import kotlin.random.Random
 
 class MessagingService : FirebaseMessagingService() {
